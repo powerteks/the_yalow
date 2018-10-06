@@ -1,0 +1,44 @@
+.site-list {
+  @include reset-list;
+  display         : flex;
+  align-items     : stretch;
+  font-family     : Arial, sans-serif;
+  font-weight     : normal;
+  font-size       : 19px;
+  line-height     : 28px;
+  letter-spacing  : -1.2px;
+  background-color: $gray;
+}
+
+.site-list__item {
+  background-color: $orange;
+  flex-grow       : 1;
+
+}
+
+.site-list__link {
+  color         : $orange-text;
+  padding-top   : 20px;
+  padding-bottom: 14px;
+  @include up-link;
+} 
+
+.site-list__link--about {
+  padding-left : 59px;
+  padding-right: 24px;
+  background   : url(../img/about.svg) 23px 20px no-repeat;
+}
+
+.site-list__link--servise {
+  padding-left : 36px;
+  padding-right: 10px;
+  background   : url(../img/servise.svg) 8px 21px no-repeat;
+  border-left  : 1px solid $orange-gray;
+}
+
+.site-list__link--contact {
+  padding-left : 51px;
+  padding-right: 16px;
+  background   : url(../img/contact.svg) 12px 20px no-repeat;
+  border-left  : 1px solid $orange-gray;
+}

@@ -1,0 +1,46 @@
+.middle-bar {
+  background: #ffffff;
+}
+
+.middle-bar__list {
+  @include reset-list;
+  margin-top: -9px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  background: url(../img/middle-bar_background.png);
+  z-index: 1;
+}
+
+.middle-bar__item {
+  
+}
+
+.middle-bar__link {
+  padding-top: 119px;
+  padding-bottom: 29px;
+  @include up-link;
+  color: #000000;
+}
+
+.middle-bar__link--cloud {
+  padding-left: 44px;
+  padding-right: 16px;
+  background: url(../img/middle-bar_cloud.svg) 75px 42px no-repeat;
+}
+
+.middle-bar__link--leaf {
+  padding-left: 51px;
+  padding-right: 47px;
+  background: url(../img/middle-bar_leaf.svg) 79px 39px no-repeat;
+}
+
+.middle-bar__link--plane {
+  padding-left: 52px;
+  padding-right: 61px;
+  background: url(../img/middle-bar_plane.svg) 55px 38px no-repeat;
+}

@@ -1,0 +1,26 @@
+.advantages {
+}
+
+.advantages__list {
+  @include reset-list;
+  & input {
+    display: none;
+  }
+}
+
+.advantages__title {
+  display: none;
+}
+
+.advantages__item {
+  height: 327px;
+  display: none;
+}
+
+.advantages__player {
+}
+
+#button_slide_1:checked ~ .slider__item-1,
+#button_slide_2:checked ~ .slider__item-2 {
+  display: block;
+}

@@ -3,72 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <title>The Yalow</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-  <header class="page_header">
+  <header class="page-header">
     <nav class="main-navigation">
       <ul class="main-navigation__list site-list">
+        <li class="site-list__item main-logo">
+          <a class="site-list__link main-logo__link" href="#">TheYalow</a></li>
         <li class="site-list__item">
-          <a class="site-list__link main-navigationv__logo" href="#">The Yalow</a></li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">About Us</a>
+          <a class="site-list__link site-list__link--about" href="#">About Us</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="#">Services</a>
+          <a class="site-list__link site-list__link--servise" href="#">Services</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="#">Contact</a>
+          <a class="site-list__link site-list__link--contact" href="#">Contact</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="page-main">
     <section class="advantages">
-      <ul class="advantages__slider">
-        <li class="advantages__slide">
+      <ul class="advantages__list slider">
+        <input type="radio" name="slide_1" id="button_slide_1" checked>
+        <input type="radio" name="slide_2" id="button_slide_2">
+        <li class="advantages__item slider__item-1">
           <h2 class="advantages__title"></h2>
-          <img src="" alt="" class="advantages__player"></img>
+          <img src="img/slider-player-announcement.jpg" alt="player_announcement" class="advantages__player">
         </li>
-        <li class="advantages__slide">
+        <li class="advantages__item slider__item-2">
           <h2 class="advantages__title"></h2>
-          <img src="" alt="" class="advantages__player"></img>
+          <img src="" alt="" class="advantages__player">
         </li>
       </ul>
-      <div class="advantages__navigation">
-        <label for="" class="advantages__button advantages__button--preview"></label>
-        <label for="" class="advantages__button advantages__button--next"></label>
+      <div class="advantages__navigation mobile-hidden">
+        <label for="button_slide_1" class="advantages__button advantages__button--preview"></label>
+        <label for="button_slide_2" class="advantages__button advantages__button--next"></label>
       </div>
     </section>
     <section class="middle-bar">
       <ul class="middle-bar__list">
         <li class="middle-bar__item">
-          <a class="middle-bar__link middle-bar__link--cloud" href=""></a>
+          <a class="middle-bar__link middle-bar__link--cloud" href="#">Better design</a>
         </li>
         <li class="middle-bar__item">
-          <a class="middle-bar__link middle-bar__link--leaf" href=""></a>
+          <a class="middle-bar__link middle-bar__link--leaf" href="#">Customise</a>
         </li>
         <li class="middle-bar__item">
-          <a class="middle-bar__link middle-bar__link--plane" href=""></a>
+          <a class="middle-bar__link middle-bar__link--plane" href="#">Its free</a>
         </li>
       </ul>
     </section>
     <section class="banner">
       <ul class="banner__list">
         <li class="banner__item banner__message">
-          <p class="banner__message-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-          <a href="" class="button__plus"></a>
+          <p class="banner__message-text">Lorem ipsum dolor sit amet, consecte- tur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+          <a href="#" class="button__plus"></a>
         </li>
         <li class="banner__item banner__player">
-          <img class="banner__player-iframe"></img>
+          <img class="banner__player-iframe" src="img/banner-player-announcement.jpg" alt="player_announcement" width="315px" height="232px">
         </li>
         <li class="banner__item banner-twitter">
-          <img class="banner-twitter__image"></img>
           <ul class="banner-twitter__list">
-            <li class="banner-twitter__item banner-twitter__message">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__item banner-twitter__message">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__item banner-twitter__message">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__item banner-twitter__tweet">
+            <li class="banner-twitter__item banner-twitter__message--1">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
+            <li class="banner-twitter__item banner-twitter__message--2">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
+            <li class="banner-twitter__item banner-twitter__message--3">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
+            <li class="banner-twitter__tweet">
               <form class="banner-twitter__form">
                 <input class="banner-twitter__input"></input>
                 <submit class="banner-twitter__submit">Tweet</submit>
@@ -78,9 +80,16 @@
         </li>
       </ul>
     </section>
+    <section class="bonus">
+      <h1 class="bonus__title">Lorem ipsum dolor sit amet</h1>
+      <img src="img/bonus-img.jpg" alt="Bonus" class="bonus__image">
+      <div class="bonus__sticker">
+        <p class="bonus__sticker-text">Its 100% Free</p>
+    </div>
+    </section>
   </main>
-  <div class="main_footer">
-    
-  </div>
+  <footer class="page-footer">
+  <a class="page-footer__logo main-logo__link" href="#">TheYalow</a>
+  </footer>
 </body>
 </html>

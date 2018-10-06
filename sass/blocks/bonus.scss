@@ -1,0 +1,43 @@
+.bonus {
+  position  : relative;
+  background: $gray;
+}
+
+.bonus__title {
+  margin        : 0;
+  position      : absolute;
+  top           : 30px;
+  left          : 18px;
+  font-family   : "Open Sans", sans-serif;
+  font-weight   : normal;
+  font-size     : 39px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color         : $orange;
+  background    : $gray;
+}
+
+.bonus__image {
+  width : 640px;
+  height: 461px;
+}
+
+.bonus__sticker {
+  position      : absolute;
+  top           : 115px;
+  left          : 27px;
+  width         : 116px;
+  height        : 116px;
+  border-radius : 58px;
+  font-family   : "Open Sans", sans-serif;
+  font-weight   : normal;
+  font-size     : 18px;
+  text-transform: uppercase;
+  color         : $white-text;
+  background    : $orange;
+}
+
+.bonus__sticker-text {
+  margin-top: 36px;
+  text-align: center;
+}

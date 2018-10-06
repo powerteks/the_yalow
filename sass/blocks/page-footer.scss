@@ -1,0 +1,16 @@
+.page-footer {
+  margin    : 0 auto;
+  width     : 640px;
+  position  : relative;
+  background: $gray;
+  z-index   : 1;
+  box-shadow: 0 -2px 8px -1px #000000;
+}
+
+.page-footer__logo {
+  padding            : 10px 106px;
+  text-transform     : uppercase;
+  text-decoration    : none;
+  background-position: 65px 6px;
+  background-size    : 31px 31px;
+}
