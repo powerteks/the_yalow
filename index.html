@@ -11,7 +11,8 @@
     <nav class="main-navigation">
       <ul class="main-navigation__list site-list">
         <li class="site-list__item main-logo">
-          <a class="site-list__link main-logo__link" href="#">TheYalow</a></li>
+          <a class="site-list__link main-logo__link">TheYalow<small class="main-logo__sub">Craft By Css author.com</small></a>
+        </li>
         <li class="site-list__item">
           <a class="site-list__link site-list__link--about" href="#">About Us</a>
         </li>
@@ -27,21 +28,25 @@
   <main class="page-main">
     <section class="advantages">
       <ul class="advantages__list slider">
-        <input type="radio" name="slide_1" id="button_slide_1" checked>
-        <input type="radio" name="slide_2" id="button_slide_2">
+        <input type="radio" name="slide_control" id="button_slide_1" checked>
+        <input type="radio" name="slide_control" id="button_slide_2">
         <li class="advantages__item slider__item-1">
-          <h2 class="advantages__title"></h2>
-          <img src="img/slider-player-announcement.jpg" alt="player_announcement" class="advantages__player">
+          <h2 class="advantages__title">The cool</br><b>The minimal</b></h2>
+          <div class="advantages__player"></div>
         </li>
         <li class="advantages__item slider__item-2">
-          <h2 class="advantages__title"></h2>
-          <img src="" alt="" class="advantages__player">
+          <h2 class="advantages__title">The cool</br><b>The big</b></h2>
+          <div class="advantages__player"></div>
         </li>
+        <div class="advantages__control-slide-1">
+          <label for="button_slide_2" class="advantages__button advantages__button--preview"></label>
+          <label for="button_slide_2" class="advantages__button advantages__button--next"></label>
+        </div>
+        <div class="advantages__control-slide-2">
+          <label for="button_slide_1" class="advantages__button advantages__button--preview"></label>
+          <label for="button_slide_1" class="advantages__button advantages__button--next"></label>
+        </div>
       </ul>
-      <div class="advantages__navigation mobile-hidden">
-        <label for="button_slide_1" class="advantages__button advantages__button--preview"></label>
-        <label for="button_slide_2" class="advantages__button advantages__button--next"></label>
-      </div>
     </section>
     <section class="middle-bar">
       <ul class="middle-bar__list">
@@ -57,39 +62,91 @@
       </ul>
     </section>
     <section class="banner">
-      <ul class="banner__list">
-        <li class="banner__item banner__message">
-          <p class="banner__message-text">Lorem ipsum dolor sit amet, consecte- tur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
-          <a href="#" class="button__plus"></a>
-        </li>
-        <li class="banner__item banner__player">
-          <img class="banner__player-iframe" src="img/banner-player-announcement.jpg" alt="player_announcement" width="315px" height="232px">
-        </li>
-        <li class="banner__item banner-twitter">
-          <ul class="banner-twitter__list">
-            <li class="banner-twitter__item banner-twitter__message--1">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__item banner-twitter__message--2">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__item banner-twitter__message--3">Daily Mobile UI Design Inspiration #1</br>via @cssauthor</li>
-            <li class="banner-twitter__tweet">
-              <form class="banner-twitter__form">
-                <input class="banner-twitter__input"></input>
-                <submit class="banner-twitter__submit">Tweet</submit>
-              </form>
+      <div class="banner__wrapper">
+        <h2 class="banner__title">Lorem ipsum dolor sit amet</h2>
+        <div class="banner__horizontal-wrapper">
+          <ul class="banner__list">
+            <li class="banner__item banner__message-data">
+              <div class="banner__message">
+                <p class="banner__message-text">Lorem ipsum dolor sit amet, consecte- tur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                <a href="#" class="banner__button-plus"></a>
+              </div>
+              <div class="banner__data">
+                <span>25</br></span>
+                <span>April</span>
+              </div>
+            </li>
+            <li class="banner__item banner__player">
+              <div class="banner__player-iframe"></div>
+            </li>
+            <li class="banner__item banner__twitter">
+              <div class="banner__twitter-logo">
+                <div class="banner__number-messages">22</div>
+                <a href="#" class="banner__button-plus"></a>
+              </div>
+              <ul class="banner__twitter-list">
+                <li class="banner__twitter-item banner__twitter-message--1">
+                  <p>Daily Mobile UI Design Inspiration #1</br>via @cssauthor</p>
+                </li>
+                <li class="banner__twitter-item banner__twitter-message--2">
+                  <p>Daily Mobile UI Design Inspiration #1</br>via @cssauthor</p>
+                </li>
+                <li class="banner__twitter-item banner__twitter-message--3">
+                  <p>Daily Mobile UI Design Inspiration #1</br>via @cssauthor</p>
+                </li>
+                <li class="banner__twitter-tweet">
+                  <form class="banner__twitter-form">
+                    <input class="banner__twitter-input"></input>
+                    <submit class="banner__twitter-submit">Tweet</submit>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            <li class="banner__item banner__message-data">
+              <div class="banner__message">
+                <p class="banner__message-text">Lorem ipsum dolor sit amet, consecte- tur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                <a href="#" class="banner__button-plus"></a>
+              </div>
+              <div class="banner__data">
+                <span>25</br></span>
+                <span>April</span>
+              </div>
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
     <section class="bonus">
-      <h1 class="bonus__title">Lorem ipsum dolor sit amet</h1>
-      <img src="img/bonus-img.jpg" alt="Bonus" class="bonus__image">
-      <div class="bonus__sticker">
-        <p class="bonus__sticker-text">Its 100% Free</p>
-    </div>
+      <div class="bonus__wrapper">
+        <h1 class="bonus__title">Lorem ipsum dolor sit amet</h1>
+        <div class="bonus__poster">
+          <img src="img/bonus-img.png" alt="Bonus" class="bonus__image">
+          <div class="bonus__sticker">
+            <p class="bonus__sticker-text">Its 100% Free</p>
+          </div>
+        </div>
+        <ul class="bonus__list">
+          <li class="bonus__item">
+            <p>Sed ut perspiciatis unde omnis</p>
+          </li>
+          <li class="bonus__item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+          </li>
+          <li class="bonus__item">
+            <p>Sed ut perspiciatis unde omnis</p>
+          </li>
+          <li class="bonus__item">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
-  <a class="page-footer__logo main-logo__link" href="#">TheYalow</a>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo main-logo__link">TheYalow</a>
+      <div class="page-footer__designed">Designed by cssauthor.com</div>
+    </div>
   </footer>
 </body>
 </html>

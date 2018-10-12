@@ -1,6 +1,16 @@
+.banner__title {
+  display: none;
+}
+
 .banner__list {
   @include reset-list;
+
+  margin   : 0 auto;
+
   display  : flex;
+
+  width    : 640px;
+
   flex-flow: row wrap;
 }
 
@@ -9,29 +19,41 @@
 }
 
 .banner__message {
-  padding    : 17px 29px 0 26px;
+  padding    : 17px 29px 16px 26px;
+
   position   : relative;
-  width      : 299px;
-  font-family: Arial, sans-serif;
-  font-weight: lighter;
-  font-size  : 28px;
-  line-height: 1.2;
   box-sizing : border-box;
+  width      : 299px;
+
+  font-size  : 28px;
+  font-weight: lighter;
+  line-height: 33px;
+
   color      : $white-text;
   background : $orange-message;
-  
-  & p{
+
+  & p {
     margin: 0;
   }
 }
 
-.button__plus {
+.banner__button-plus {
   position  : absolute;
-  bottom    : 0;
   right     : 0;
+  bottom    : 0;
   width     : 34px;
   height    : 46px;
+
   background: url(../img/banner_plus.svg) 12px 18px no-repeat;
+
+  &:hover {
+    background     : url(../img/banner_plus_hover.svg) 3px 12.5px no-repeat;
+    background-size: 22px 22px;
+  }
+}
+
+.banner__data {
+  display: none;
 }
 
 .banner__player {
@@ -40,94 +62,273 @@
 }
 
 .banner__player-iframe {
+  width     : 315px;
+  height    : 232px;
+
+  background: url(../../img/banner-player-announcement.jpg) no-repeat;
 }
 
-.banner-twitter {
-  margin    : 0;
-  width     : 100%;
-  background: $orange url(../img/twitter.svg) 85px 58px no-repeat;
-  z-index   : -2;
-}
+.banner__twitter {
+  margin        : 0;
 
-.banner-twitter__list {
-  float         : right;
   display       : flex;
-  flex-direction: column;
-  width         : 321px;
-  list-style    : none;
+  flex-direction: row;
+
+  width         : 640px;
+
+  align-items   : stretch;
 }
 
-.banner-twitter__item {
-  margin     : 7px 31px 7px 15px;
-  padding    : 7px 18px 5px;
-  position   : relative;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
-  font-size  : 13px;
-  background: hsla(0, 0%, 100%, 1);
-  border: none;
-  border-radius: 9px;
-  
-  &::after {
-    content   : "";
-    position  : absolute;
-    left      : -9px;
-    bottom    : 6px;
-    width     : 9px;
-    height    : 14px;
-    background: url(../../img/tweet-ops.png);
+.banner__twitter-logo {
+  position  : relative;
+  width     : 279px;
+
+  background: $orange url(../img/twitter.svg) 85px 58px no-repeat;
+
+  & .banner__button-plus {
+    display: none;
   }
 }
 
-.banner-twitter__message--1 {
+.banner__number-messages {
+  display: none;
+}
+
+.banner__twitter-list {
+  display       : flex;
+  float         : right;
+  flex-direction: column;
+
+  width         : 321px;
+
+  list-style    : none;
+
+  background    : $orange;
+}
+
+.banner__twitter-item {
+  margin       : 7px 31px 7px 15px;
+  padding      : 7px 18px 5px;
+
+  position     : relative;
+
+  font-size    : 13px;
+  font-weight  : normal;
+
+  border       : none;
+  border-radius: 9px;
+  background   : hsla(0, 0%, 100%, 1);
+
+  &::after {
+    content   : "";
+
+    position  : absolute;
+    bottom    : 8px;
+    left      : -9px;
+    width     : 9px;
+    height    : 14px;
+
+    background: url(../img/tweet-ops.png);
+  }
+}
+
+.banner__twitter-message--1 {
   margin-top: 23px;
 }
 
-.banner-twitter__message--2 {
-  background: hsla(0, 0%, 100%, .7)
+.banner__twitter-message--2 {
+  background: hsla(0, 0%, 100%, .7);
 }
 
-.banner-twitter__message--2::after {
+.banner__twitter-message--2::after {
   opacity: .7;
 }
 
-.banner-twitter__message--3 {
-  background: hsla(0, 0%, 100%, .6)
+.banner__twitter-message--3 {
+  background: hsla(0, 0%, 100%, .6);
 }
 
-.banner-twitter__message--3::after {
+.banner__twitter-message--3::after {
   opacity: .6;
 }
 
-.banner-twitter__tweet {
+.banner__twitter-tweet {
   margin: 6px 33px 12px 17px;
 }
 
-.banner-twitter__form {
+.banner__twitter-form {
   padding       : 0;
+
+  display       : flex;
+  overflow      : hidden;
+  flex-direction: row;
+
   width         : 270px;
   height        : 29px;
-  display       : flex;
-  flex-direction: row;
+
   border        : 1px solid $orange-border;
   border-radius : 12px;
-  overflow      : hidden;
 }
 
-.banner-twitter__input {
-  flex-grow    : 1;
+.banner__twitter-input {
   border       : none;
   border-radius: 12px 0 0 12px;
   box-shadow   : inset 1px 1px 6px $gray-shadow;
+
+  flex-grow    : 1;
 }
 
-.banner-twitter__submit {
+.banner__twitter-submit {
   padding    : 6px 13px;
+
+  box-sizing : border-box;
   width      : 70px;
-  font-family: Arial, sans-serif;
-  font-weight: normal;
+
   font-size  : 15px;
+  font-weight: normal;
+
   color      : $white-text;
   background : linear-gradient(#eaa927, #cf8e0c);
-  box-sizing : border-box;
+}
+
+.banner__item:nth-child(4) {
+    display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    background: url(../img/desktop_banner_background.jpg);
+  }
+
+  .banner__wrapper {
+    margin        : 0 auto;
+    padding-bottom: 21px;
+
+    width         : 1020px;
+  }
+
+  .banner__title {
+    margin        : 36px 0 32px;
+
+    display       : inline-block;
+
+    font-size     : 37px;
+    font-weight   : lighter;
+
+    letter-spacing: -2.5px;
+    text-transform: uppercase;
+
+    color         : $white-text;
+  }
+
+  .banner__horizontal-wrapper {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height       : 15px;
+
+      border-radius: 7.5px;
+      background   : hsla(0, 0%, 100%, .48);
+    }
+
+    &::-webkit-scrollbar-track {
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 7.5px;
+      background   : $orange-message;
+    }
+  }
+
+  .banner__horizontal-wrapper--window {
+  }
+
+  .banner__list {
+    padding-bottom: 43px;
+
+    display       : flex;
+    flex-direction: row;
+
+    width         : 2400px;
+  }
+
+  .banner__item {
+    margin: 0;
+  }
+
+  .banner__message {
+    padding    : 20px 29px 22px;
+
+    width      : 340px;
+
+    line-height: 38px;
+  }
+
+  .button__plus {
+    right : 2px;
+    bottom: -5px;
+  }
+
+  .banner__data {
+    padding       : 24px 25px 3px;
+
+    display       : inline-block;
+
+    font-size     : 21px;
+    line-height   : 25px;
+
+    text-transform: uppercase;
+
+    color         : #b26529;
+    background    : $orange-gray;
+
+    & span:first-child {
+      font-size  : 51px;
+      font-weight: bold;
+
+      color      : $white-text;
+    }
+  }
+
+  .banner__twitter {
+    margin-left: 34px;
+
+    width      : 692px;
+
+    align-items: flex-start;
+  }
+
+  .banner__twitter-logo {
+    width     : 331px;
+    height    : 233px;
+
+    background: $orange-message url(../img/twitter.svg) 85px 58px no-repeat;
+
+    & .banner__button-plus {
+      display: block;
+    }
+  }
+
+  .banner__number-messages {
+    display    : block;
+
+    position   : absolute;
+    top        : 15px;
+    right      : 17px;
+
+    font-size  : 25px;
+    font-weight: lighter;
+
+    color      : $white-text;
+  }
+
+  .banner__twitter-list {
+    background: $orange-message;
+
+    align-self: stretch;
+  }
+
+  .banner__item:nth-child(4) {
+    margin-left: 34px;
+  }
 }

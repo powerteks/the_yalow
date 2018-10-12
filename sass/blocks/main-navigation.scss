@@ -1,2 +1,5 @@
-.main-navigation {
+@media (min-width: $desktop-width) {
+  .main-navigation {
+    margin-top: 28px;
+  }
 }

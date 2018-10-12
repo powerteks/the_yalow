@@ -1,25 +1,33 @@
-.bonus {
+.bonus__wrapper {
+  margin    : 0 auto;
+  padding   : 29px 0 55px;
+
   position  : relative;
+  width     : 640px;
+
   background: $gray;
 }
 
 .bonus__title {
-  margin        : 0;
-  position      : absolute;
-  top           : 30px;
-  left          : 18px;
+  margin        : 0 auto;
+
   font-family   : "Open Sans", sans-serif;
-  font-weight   : normal;
   font-size     : 39px;
+  font-weight   : normal;
+
+  text-align    : center;
+  letter-spacing: .4px;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+
   color         : $orange;
-  background    : $gray;
 }
 
-.bonus__image {
-  width : 640px;
-  height: 461px;
+.bonus__poster {
+  margin-top : 73px;
+  margin-left: 57px;
+
+  width      : 540px;
+  height     : 255px;
 }
 
 .bonus__sticker {
@@ -28,16 +36,108 @@
   left          : 27px;
   width         : 116px;
   height        : 116px;
-  border-radius : 58px;
+
   font-family   : "Open Sans", sans-serif;
-  font-weight   : normal;
   font-size     : 18px;
+  font-weight   : normal;
+
   text-transform: uppercase;
+
   color         : $white-text;
+  border-radius : 58px;
   background    : $orange;
 }
 
 .bonus__sticker-text {
   margin-top: 36px;
+
   text-align: center;
+}
+
+.bonus__list {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .bonus {
+    background: $gray url(../img/desktop_bonus-background.jpg);
+  }
+
+  .bonus__wrapper {
+    margin        : 0 auto;
+    padding-bottom: 89px;
+
+    display       : flex;
+
+    width         : 1020px;
+
+    background    : url(../img/desktop_bonus-background.jpg);
+
+    flex-flow     : row wrap;
+  }
+
+  .bonus__title {
+    margin    : 5px auto;
+
+    width     : 100%;
+
+    font-size : 43px;
+
+    text-align: center;
+  }
+
+  .bonus__poster {
+    margin-top: 39px;
+    margin-left: 18px;
+
+    width: 602px;
+  }
+
+  .bonus__sticker {
+    top : 94px;
+    left: -2px;
+  }
+
+  .bonus__list {
+    @include reset-list;
+
+    margin-top    : 74px;
+    padding-left  : 51px;
+
+    display       : flex;
+    flex-direction: column;
+    
+    box-sizing    : border-box;
+    width         : 398px;
+    
+    font-family   : "Open Sans", sans-serif;
+    font-size     : 22px;
+    font-weight   : normal;  
+    line-height   : 26px;
+
+    color         : $gray-text;
+  }
+
+  .bonus__item {
+    padding : 10px 0 10px;
+
+    position: relative;
+  }
+
+  .bonus__item p {
+    margin: 0;
+  }
+
+  .bonus__item p::before {
+    content      : "";
+
+    position     : absolute;
+    top          : 16px;
+    left         : -33px;
+    width        : 14px;
+    height       : 14px;
+
+    border-radius: 7px;
+    background   : $orange;
+  }
 }

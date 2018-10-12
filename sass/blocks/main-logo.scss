@@ -3,12 +3,56 @@
 }
 
 .main-logo__link {
-  padding-left  : 58px;
   padding-right : 20px;
+  padding-left  : 58px;
+
   display       : block;
+
   font-style    : italic;
+
+  letter-spacing: .3px;
+
   color         : $white-text;
-  letter-spacing: 0.3px;
-  text-shadow   : 1px 1.5px 0 #000000;
   background    : url(../img/logo.svg) 12px 11px no-repeat;
+  text-shadow   : 1px 1.5px 0 #000000;
+}
+
+.main-logo__sub {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo {
+    margin-right: auto;
+
+    background  : none;
+    box-shadow  : none;
+  }
+
+  .main-logo__link {
+    padding            : 24px 10px 11px 89px;
+
+    width              : 411px;
+
+    font-size          : 41px;
+    line-height        : 49px;
+
+    letter-spacing     : -.4px;
+
+    background-position: 0 0;
+    background-size    : 84px 84px;
+  }
+
+  .main-logo__sub {
+    display       : inline-block;
+
+    font-size     : 12px;
+    font-style    : normal;
+    line-height   : 14px;
+
+    text-transform: uppercase;
+
+    color         : $white-text;
+    text-shadow   : none;
+  }
 }

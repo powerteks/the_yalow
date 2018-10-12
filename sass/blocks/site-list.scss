@@ -1,44 +1,108 @@
 .site-list {
   @include reset-list;
+
   display         : flex;
-  align-items     : stretch;
-  font-family     : Arial, sans-serif;
-  font-weight     : normal;
+  flex-direction  : row;
+
   font-size       : 19px;
   line-height     : 28px;
+
   letter-spacing  : -1.2px;
+
   background-color: $gray;
+
+  align-items     : stretch;
 }
 
 .site-list__item {
   background-color: $orange;
-  flex-grow       : 1;
 
+  flex-grow       : 1;
 }
 
 .site-list__link {
-  color         : $orange-text;
+  @include up-link;
+
   padding-top   : 20px;
   padding-bottom: 14px;
-  @include up-link;
-} 
+
+  color         : $orange-text;
+}
 
 .site-list__link--about {
-  padding-left : 59px;
   padding-right: 24px;
+  padding-left : 59px;
+
   background   : url(../img/about.svg) 23px 20px no-repeat;
 }
 
 .site-list__link--servise {
-  padding-left : 36px;
   padding-right: 10px;
-  background   : url(../img/servise.svg) 8px 21px no-repeat;
+  padding-left : 36px;
+
   border-left  : 1px solid $orange-gray;
+  background   : url(../img/servise.svg) 8px 21px no-repeat;
 }
 
 .site-list__link--contact {
-  padding-left : 51px;
   padding-right: 16px;
-  background   : url(../img/contact.svg) 12px 20px no-repeat;
+  padding-left : 51px;
+
   border-left  : 1px solid $orange-gray;
+  background   : url(../img/contact.svg) 12px 20px no-repeat;
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    font-size  : 17px;
+    line-height: 21px;
+
+    background : none;
+
+    align-items: flex-end;
+  }
+
+  .site-list__item {
+    box-shadow: -4px -4px $orange-shadow, -8px -8px $orange-shadow;
+
+    flex-grow : 0;
+  }
+
+  .site-list__link {
+    padding   : 11px 24px 9px 0;
+  }
+
+  .site-list__link--about {
+    padding-left   : 71px;
+    
+    background     : $orange url(../img/about.svg) 40px 11px no-repeat;
+    background-size: 21px 19px;
+
+    &:hover {
+      background   : $orange-message url(../img/about.svg) 40px 11px no-repeat;;
+    }
+  }
+
+  .site-list__link--servise {
+    padding-right  : 15px;
+    padding-left   : 41px;
+    
+    background     : $orange url(../img/servise.svg) 14px 11px no-repeat;
+    background-size: 19px 19px;
+
+    &:hover {
+      background   : $orange-message url(../img/servise.svg) 14px 11px no-repeat;
+    }
+  }
+
+  .site-list__link--contact {
+    padding-left   : 50px;
+    
+    background     : $orange url(../img/contact.svg) 17px 11px no-repeat;
+    background-size: 24px 18px;
+
+    &:hover {
+      background   : $orange-message url(../img/contact.svg) 17px 11px no-repeat;
+    }
+  }
 }
