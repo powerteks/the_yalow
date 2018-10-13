@@ -254,12 +254,12 @@ body {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 119px;
-  padding-bottom: 29px;
+  padding-top: 121px;
+  padding-bottom: 24px;
   color: #000000; }
 
 .middle-bar__link--cloud {
-  padding-left: 44px;
+  padding-left: 29px;
   background: url(../img/middle-bar_cloud.svg) 75px 42px no-repeat; }
 
 .middle-bar__link--leaf {
@@ -283,12 +283,12 @@ body {
     width: 1020px;
     background: none; }
   .middle-bar__link {
-    padding-top: 146px;
-    padding-bottom: 32px;
+    padding-top: 148px;
+    padding-bottom: 30px;
     font-size: 27px;
     font-weight: lighter;
     line-height: 33px;
-    border-right: 1px solid #474747; }
+    border-right: 1px solid #cfcfcf; }
     .middle-bar__link:hover {
       box-shadow: inset 0 1px 150px rgba(71, 71, 71, 0.33); }
   .middle-bar__link--cloud {
@@ -305,6 +305,10 @@ body {
     background-position: 119px 53px;
     background-size: 81px 83px; } }
 
+.banner__wrapper {
+  margin: 0 auto;
+  width: 640px; }
+
 .banner__title {
   display: none; }
 
@@ -312,19 +316,17 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 0 auto;
   display: flex;
-  width: 640px;
   flex-flow: row wrap; }
 
 .banner__item {
-  margin: 9px 0 9px 9px; }
+  margin: 10px 0 0 9px; }
 
 .banner__message {
-  padding: 17px 29px 16px 26px;
+  padding: 18px 29px 16px;
   position: relative;
   box-sizing: border-box;
-  width: 299px;
+  width: 298px;
   font-size: 28px;
   font-weight: lighter;
   line-height: 33px;
@@ -341,7 +343,7 @@ body {
   height: 46px;
   background: url(../img/banner_plus.svg) 12px 18px no-repeat; }
   .banner__button-plus:hover {
-    background: url(../img/banner_plus_hover.svg) 3px 12.5px no-repeat;
+    background: url(../img/banner_plus_hover.svg) 5px 11.5px no-repeat;
     background-size: 22px 22px; }
 
 .banner__data {
@@ -349,23 +351,18 @@ body {
 
 .banner__player {
   width: 315px;
-  height: 232px; }
-
-.banner__player-iframe {
-  width: 315px;
   height: 232px;
   background: url(../../img/banner-player-announcement.jpg) no-repeat; }
 
 .banner__twitter {
-  margin: 0;
+  margin-left: 0;
   display: flex;
-  flex-direction: row;
-  width: 640px;
-  align-items: stretch; }
+  flex-direction: row; }
 
 .banner__twitter-logo {
   position: relative;
-  width: 279px;
+  width: 320px;
+  min-height: 233px;
   background: #f5c506 url(../img/twitter.svg) 85px 58px no-repeat; }
   .banner__twitter-logo .banner__button-plus {
     display: none; }
@@ -374,15 +371,17 @@ body {
   display: none; }
 
 .banner__twitter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
-  float: right;
   flex-direction: column;
-  width: 321px;
+  width: 320px;
   list-style: none;
   background: #f5c506; }
 
 .banner__twitter-item {
-  margin: 7px 31px 7px 15px;
+  margin: 7px 32px 7px 13px;
   padding: 7px 18px 5px;
   position: relative;
   font-size: 13px;
@@ -390,6 +389,8 @@ body {
   border: none;
   border-radius: 9px;
   background: white; }
+  .banner__twitter-item p {
+    margin: 0; }
   .banner__twitter-item::after {
     content: "";
     position: absolute;
@@ -400,7 +401,7 @@ body {
     background: url(../img/tweet-ops.png); }
 
 .banner__twitter-message--1 {
-  margin-top: 23px; }
+  margin-top: 24px; }
 
 .banner__twitter-message--2 {
   background: rgba(255, 255, 255, 0.7); }
@@ -415,12 +416,11 @@ body {
   opacity: .6; }
 
 .banner__twitter-tweet {
-  margin: 6px 33px 12px 17px; }
+  margin: auto 33px 11px 16px; }
 
 .banner__twitter-form {
   padding: 0;
   display: flex;
-  overflow: hidden;
   flex-direction: row;
   width: 270px;
   height: 29px;
@@ -439,8 +439,15 @@ body {
   width: 70px;
   font-size: 15px;
   font-weight: normal;
+  cursor: pointer;
   color: #ffffff;
+  border-radius: 0 12px 12px 0;
   background: linear-gradient(#eaa927, #cf8e0c); }
+  .banner__twitter-submit:hover {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    background: linear-gradient(#eaa927 40%, #cf8e0c); }
 
 .banner__item:nth-child(4) {
   display: none; }
@@ -480,7 +487,7 @@ body {
     padding: 20px 29px 22px;
     width: 340px;
     line-height: 38px; }
-  .button__plus {
+  .banner__button-plus {
     right: 2px;
     bottom: -5px; }
   .banner__data {
@@ -514,14 +521,14 @@ body {
     font-weight: lighter;
     color: #ffffff; }
   .banner__twitter-list {
-    background: #ec9e03;
+    background: linear-gradient(-70deg, #f5c506, #ec9e03 85%);
     align-self: stretch; }
   .banner__item:nth-child(4) {
     margin-left: 34px; } }
 
 .bonus__wrapper {
   margin: 0 auto;
-  padding: 29px 0 55px;
+  padding: 37px 0 55px;
   position: relative;
   width: 640px;
   background: #474747; }
@@ -532,12 +539,12 @@ body {
   font-size: 39px;
   font-weight: normal;
   text-align: center;
-  letter-spacing: .4px;
+  letter-spacing: -.4px;
   text-transform: uppercase;
   color: #f5c506; }
 
 .bonus__poster {
-  margin-top: 73px;
+  margin-top: 75px;
   margin-left: 57px;
   width: 540px;
   height: 255px; }
@@ -568,18 +575,18 @@ body {
     background: #474747 url(../img/desktop_bonus-background.jpg); }
   .bonus__wrapper {
     margin: 0 auto;
-    padding-bottom: 89px;
+    padding-bottom: 87px;
     display: flex;
     width: 1020px;
     background: url(../img/desktop_bonus-background.jpg);
     flex-flow: row wrap; }
   .bonus__title {
-    margin: 5px auto;
+    margin: 4px auto;
     width: 100%;
     font-size: 43px;
     text-align: center; }
   .bonus__poster {
-    margin-top: 39px;
+    margin-top: 43px;
     margin-left: 18px;
     width: 602px; }
   .bonus__sticker {
@@ -589,7 +596,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 74px;
+    margin-top: 80px;
     padding-left: 51px;
     display: flex;
     flex-direction: column;
@@ -656,7 +663,7 @@ body {
     background-position: 0 6px;
     background-size: 54px 54px; }
   .page-footer__designed {
-    padding-top: 16px;
+    padding-top: 19px;
     display: block;
     float: right;
     font-family: "Open Sans", sans-serif;

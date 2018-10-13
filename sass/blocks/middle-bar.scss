@@ -25,27 +25,23 @@
 .middle-bar__link {
   @include up-link;
 
-  padding-top   : 119px;
-  padding-bottom: 29px;
-
+  padding-top   : 121px;
+  padding-bottom: 24px;
   color         : #000000;
 }
 
 .middle-bar__link--cloud {
-  padding-left: 44px;
-
+  padding-left: 29px;
   background  : url(../img/middle-bar_cloud.svg) 75px 42px no-repeat;
 }
 
 .middle-bar__link--leaf {
   padding-left: 51px;
-
   background  : url(../img/middle-bar_leaf.svg) 79px 39px no-repeat;
 }
 
 .middle-bar__link--plane {
   padding-left: 52px;
-
   background  : url(../img/middle-bar_plane.svg) 55px 38px no-repeat;
 }
 
@@ -62,21 +58,19 @@
 
   .middle-bar__list {
     margin    : 0 auto;
-
     width     : 1020px;
-
     background: none;
   }
 
   .middle-bar__link {
-    padding-top   : 146px;
-    padding-bottom: 32px;
+    padding-top   : 148px;
+    padding-bottom: 30px;
 
     font-size     : 27px;
     font-weight   : lighter;
     line-height   : 33px;
 
-    border-right  : 1px solid $gray;
+    border-right  : 1px solid $gray-border;
 
     &:hover {
       box-shadow: inset 0 1px 150px hsla(0, 0%, 28%, .33);
@@ -85,7 +79,6 @@
 
   .middle-bar__link--cloud {
     padding-left       : 79px;
-
     border-left        : 1px solid $gray-border;
     background-position: 112px 60px;
     background-size    : 109px 74px;
@@ -93,14 +86,12 @@
 
   .middle-bar__link--leaf {
     padding-left       : 105px;
-
     background-position: 135px 36px;
     background-size    : 91px 95px;
   }
 
   .middle-bar__link--plane {
     padding-left       : 109px;
-
     background-position: 119px 53px;
     background-size    : 81px 83px;
   }

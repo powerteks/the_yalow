@@ -1,11 +1,11 @@
 .advantages {
   margin: 0 auto;
-
   width : 640px;
 }
 
 .advantages__list {
   @include reset-list;
+
   & input {
     display: none;
   }
@@ -19,7 +19,6 @@
 .advantages__player {
   width     : 640px;
   height    : 327px;
-
   background: url(../img/slider-player-announcement.jpg) no-repeat;
 }
 
@@ -31,21 +30,18 @@
 @media (min-width: $desktop-width) {
   .advantages {
     margin        : 57px auto 71px;
-
     position      : relative;
     width         : 1020px;
   }
 
   .advantages__list {
     padding : 0 10px;
-
     position: relative;
   }
 
   .advantages__item {
     /* display: flex; - checked in label */
     flex-direction: row-reverse;
-
     align-items   : center;
   }
 
@@ -78,7 +74,6 @@
     color         : $orange;
     & b {
       font-weight: lighter;
-
       color      : $white-text;
     }
   }
@@ -107,7 +102,6 @@
 
     &:hover {
       cursor         : pointer;
-
       background     : $orange-message url(../img/button-arrow.svg) 8px 14px no-repeat;
       background-size: 14.5px 28.5px;
     }
@@ -138,7 +132,6 @@
 
     &:hover {
       cursor         : pointer;
-
       background     : $orange-message url(../img/button-arrow-next.svg) 11px 14px no-repeat;
       background-size: 14.5px 28.5px;
     }

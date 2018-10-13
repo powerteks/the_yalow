@@ -16,7 +16,6 @@
 
 .site-list__item {
   background-color: $orange;
-
   flex-grow       : 1;
 }
 
@@ -25,14 +24,12 @@
 
   padding-top   : 20px;
   padding-bottom: 14px;
-
   color         : $orange-text;
 }
 
 .site-list__link--about {
   padding-right: 24px;
   padding-left : 59px;
-
   background   : url(../img/about.svg) 23px 20px no-repeat;
 }
 
@@ -64,7 +61,6 @@
 
   .site-list__item {
     box-shadow: -4px -4px $orange-shadow, -8px -8px $orange-shadow;
-
     flex-grow : 0;
   }
 
@@ -74,7 +70,6 @@
 
   .site-list__link--about {
     padding-left   : 71px;
-    
     background     : $orange url(../img/about.svg) 40px 11px no-repeat;
     background-size: 21px 19px;
 
@@ -97,7 +92,6 @@
 
   .site-list__link--contact {
     padding-left   : 50px;
-    
     background     : $orange url(../img/contact.svg) 17px 11px no-repeat;
     background-size: 24px 18px;
 

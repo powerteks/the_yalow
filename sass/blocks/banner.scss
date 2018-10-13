@@ -1,3 +1,8 @@
+.banner__wrapper {
+  margin   : 0 auto;
+  width    : 640px;
+}
+
 .banner__title {
   display: none;
 }
@@ -5,25 +10,20 @@
 .banner__list {
   @include reset-list;
 
-  margin   : 0 auto;
-
   display  : flex;
-
-  width    : 640px;
-
   flex-flow: row wrap;
 }
 
 .banner__item {
-  margin: 9px 0 9px 9px;
+  margin: 10px 0 0 9px;
 }
 
 .banner__message {
-  padding    : 17px 29px 16px 26px;
+  padding    : 18px 29px 16px;
 
   position   : relative;
   box-sizing : border-box;
-  width      : 299px;
+  width      : 298px;
 
   font-size  : 28px;
   font-weight: lighter;
@@ -47,7 +47,7 @@
   background: url(../img/banner_plus.svg) 12px 18px no-repeat;
 
   &:hover {
-    background     : url(../img/banner_plus_hover.svg) 3px 12.5px no-repeat;
+    background     : url(../img/banner_plus_hover.svg) 5px 11.5px no-repeat;
     background-size: 22px 22px;
   }
 }
@@ -57,32 +57,21 @@
 }
 
 .banner__player {
-  width : 315px;
-  height: 232px;
-}
-
-.banner__player-iframe {
   width     : 315px;
   height    : 232px;
-
   background: url(../../img/banner-player-announcement.jpg) no-repeat;
 }
 
 .banner__twitter {
-  margin        : 0;
-
+  margin-left   : 0;
   display       : flex;
   flex-direction: row;
-
-  width         : 640px;
-
-  align-items   : stretch;
 }
 
 .banner__twitter-logo {
   position  : relative;
-  width     : 279px;
-
+  width     : 320px;
+  min-height: 233px;
   background: $orange url(../img/twitter.svg) 85px 58px no-repeat;
 
   & .banner__button-plus {
@@ -95,11 +84,12 @@
 }
 
 .banner__twitter-list {
+  @include reset-list;
+
   display       : flex;
-  float         : right;
   flex-direction: column;
 
-  width         : 321px;
+  width         : 320px;
 
   list-style    : none;
 
@@ -107,7 +97,7 @@
 }
 
 .banner__twitter-item {
-  margin       : 7px 31px 7px 15px;
+  margin       : 7px 32px 7px 13px;
   padding      : 7px 18px 5px;
 
   position     : relative;
@@ -118,6 +108,10 @@
   border       : none;
   border-radius: 9px;
   background   : hsla(0, 0%, 100%, 1);
+
+  & p {
+    margin: 0;
+  }
 
   &::after {
     content   : "";
@@ -133,7 +127,7 @@
 }
 
 .banner__twitter-message--1 {
-  margin-top: 23px;
+  margin-top: 24px;
 }
 
 .banner__twitter-message--2 {
@@ -153,14 +147,13 @@
 }
 
 .banner__twitter-tweet {
-  margin: 6px 33px 12px 17px;
+  margin: auto 33px 11px 16px;
 }
 
 .banner__twitter-form {
   padding       : 0;
 
   display       : flex;
-  overflow      : hidden;
   flex-direction: row;
 
   width         : 270px;
@@ -174,25 +167,36 @@
   border       : none;
   border-radius: 12px 0 0 12px;
   box-shadow   : inset 1px 1px 6px $gray-shadow;
-
   flex-grow    : 1;
 }
 
 .banner__twitter-submit {
-  padding    : 6px 13px;
+  padding      : 6px 13px;
 
-  box-sizing : border-box;
-  width      : 70px;
+  box-sizing   : border-box;
+  width        : 70px;
 
-  font-size  : 15px;
-  font-weight: normal;
+  font-size    : 15px;
+  font-weight  : normal;
 
-  color      : $white-text;
-  background : linear-gradient(#eaa927, #cf8e0c);
+  cursor       : pointer;
+
+  color        : $white-text;
+  border-radius: 0 12px 12px 0;
+  background   : linear-gradient(#eaa927, #cf8e0c);
+
+  &:hover {
+    padding-top : 5px;
+    padding-left: 10px;
+
+    font-size   : 17px;
+
+    background  : linear-gradient(#eaa927 40%, #cf8e0c);
+  }
 }
 
 .banner__item:nth-child(4) {
-    display: none;
+  display: none;
 }
 
 @media (min-width: $desktop-width) {
@@ -203,7 +207,6 @@
   .banner__wrapper {
     margin        : 0 auto;
     padding-bottom: 21px;
-
     width         : 1020px;
   }
 
@@ -226,7 +229,6 @@
 
     &::-webkit-scrollbar {
       height       : 15px;
-
       border-radius: 7.5px;
       background   : hsla(0, 0%, 100%, .48);
     }
@@ -238,9 +240,6 @@
       border-radius: 7.5px;
       background   : $orange-message;
     }
-  }
-
-  .banner__horizontal-wrapper--window {
   }
 
   .banner__list {
@@ -258,13 +257,11 @@
 
   .banner__message {
     padding    : 20px 29px 22px;
-
     width      : 340px;
-
     line-height: 38px;
   }
 
-  .button__plus {
+  .banner__button-plus {
     right : 2px;
     bottom: -5px;
   }
@@ -285,23 +282,19 @@
     & span:first-child {
       font-size  : 51px;
       font-weight: bold;
-
       color      : $white-text;
     }
   }
 
   .banner__twitter {
     margin-left: 34px;
-
     width      : 692px;
-
     align-items: flex-start;
   }
 
   .banner__twitter-logo {
     width     : 331px;
     height    : 233px;
-
     background: $orange-message url(../img/twitter.svg) 85px 58px no-repeat;
 
     & .banner__button-plus {
@@ -323,8 +316,7 @@
   }
 
   .banner__twitter-list {
-    background: $orange-message;
-
+    background: linear-gradient(-70deg, $orange, $orange-message 85%);
     align-self: stretch;
   }
 
