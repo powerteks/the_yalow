@@ -352,7 +352,7 @@ body {
 .banner__player {
   width: 315px;
   height: 232px;
-  background: url(../../img/banner-player-announcement.jpg) no-repeat; }
+  background: url(../img/banner-player-announcement.jpg) no-repeat; }
 
 .banner__twitter {
   margin-left: 0;
